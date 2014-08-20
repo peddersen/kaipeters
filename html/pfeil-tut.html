@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web | Kai Peters</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+	</head>
+	
+	<body>
+		
+		<header>
+			<a href="../index.html">
+				<h1>KAI PETERS<br/><span>usability &amp; web starter</span></h1>
+			</a>
+				
+			<nav>	
+				<a class="big-nav" href="usability.html">Usability</a>
+				<a class="big-nav" href="web.html">Web</a>
+				<a class="big-nav" href="about.html">About</a>
+			</nav>
+			
+			<a  href="#" id="menu-icon"><img src="../img/burger.png" /></a>
+				<ul>
+					<a href="usability.html"><li>Usability</li></a>
+					<a href="web.html"><li>Web</li></a>
+					<a href="about.html"><li>About</li></a>
+				</ul>
+		</header>
+		
+		<div class="container">
+				
+				<!-- START DATUM UND ÜBERSCHRIFT -->
+				<div class="row">
+					
+					<a href="#">
+					<div class="blog-datum col-md-3"><span>18. aug 2014</span></div>
+					</a>
+					
+					<div class="blog-ueberschrift col-md-9"><a href="#">Web Tutorial: Einklapp-Pfeile wie bei Wikipedia</a></div> <!-- HÖCHSTEN 49 ZEICHEN -->
+				
+				</div>
+				<!-- ENDE DATUM UND ÜBERSCHRIFT -->
+				
+				<br/>
+				
+				<!-- START BILD -->
+				<div class="row">
+					<div class="col-md-12 vorschau-bild">
+						<figure>
+							<a href="#">
+							<img src="../img/wikipedia-pfeile.png"/> <!-- Vorschaubilder immer im Seitenverhältnis 12:5 (24:10) Bsp: 2280:1200, 1440:600, min 720:300  -->
+							</a>
+						</figure>
+					</div>
+				</div>
+				<!-- ENDE BILD -->
+				
+				<br/>
+				
+				<!-- START TEXT -->
+				<div class="row">
+					<div class="col-md-12 vorschau-text">
+						<p>
+							Wikipedia gibt dem Nutzer in der Webapp (also der mobilen Webseite) die Möglichkeit einzelne Kapitel von Artikeln ein- oder auszuklappen. Um 							anzuzeigen, ob das Kapitel aktuell ein- oder ausgeklappt ist, werden kleine Pfeil-Grafiken genutzt. Diese stehen links neben den Überschriften. Wenn 							die Pfeile nach oben zeigen, ist das Kapitel ausgeklappt; nach oben dann logischerweise eingeklappt. Der Nutzer schließt oder öffnet ein Kapitel indem 							er einmal auf die Überschrift tippt. Ein schönes kleines Tool, das gerade auf kleinen Bildschirmen – wie von Smartphones - extrem praktisch ist. Wer in 							seiner Webapp viel Text verwendet, seine Nutzer aber nicht ewig scrollen lassen will, für den kann dieses kleine Tool ganz hilfreich sein. Mit einem 							kleinen Tutorial zeige ich euch, wie ihr diesen Effekt ganz einfach selbst nachbauen könnt.
+						</p>
+						<p>
+							Wer sich vorher schon mal angucken will, wie das Ganze am Ende aussieht, kann sich hier die Demo angucken:
+						</p>
+						<p class="text-button">
+							<a href="../pfeil_tut/demo-pfeil.html" target="_blank">
+							<button class="demo-button">DEMO</button>
+							</a>
+						</p>
+						<p>
+							Zuerst mal das Markup:
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;body&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt;button/&gt; Kapitel 1&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum... &lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button/&gt; Kapitel 2&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum..&lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button&quot;/&gt; Kapitel 3&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+        &lt;/section&gt;
+     &lt;/article&gt;
+&lt;/body&gt;
+</pre>
+						</p>
+						<p>
+							Wir verwenden hier drei Kapitel mit entsprechend drei Kapitelüberschriften. Die Pfeile samt Überschrift werden in ein <span 							class="code">&lt;button&gt;</span> Element geschrieben, damit es später egal ist, ob man auf den Pfeil oder die den Text in der Überschrift tippt, um 							das Kapitel ein- oder auszuklappen. Der eigentliche Text des Kapitels steht klassisch im <span class="code">&lt;p&gt;</span> Element und das ganze 							Konstrukt wird von den in HTML5 neuen Elementen <span class="code">&lt;article&gt;</span> und <span class="code">&lt;section&gt;</span> 							zusammengehalten. Jetzt packen wir die Pfeil Grafiken dazu. Die könnt ihr entweder direkt aus Wikipedia downloaden oder selber bauen. Innerhalb der 							Button-Tags aber vor dem Text für die Überschrift werden jetzt die Grafiken des nach unten zeigenden Pfeils und des nach oben zeigenden 							Pfeils eingefügt. Die Reihenfolge spielt dabei keine Rolle. 
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;body&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt;button&gt;<span class="markup-rot">&lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt;</span> 
+                Kapitel 1
+            &lt;/button&gt;
+                &lt;p&gt;Lorem ipsum... &lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button&gt;<span class="markup-rot">&lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt;</span> 
+                Kapitel 2
+            &lt;/button&gt;
+                &lt;p&gt;Lorem ipsum..&lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button&gt;<span class="markup-rot">&lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt;</span> 
+                Kapitel 3
+            &lt;/button&gt;
+                &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+        &lt;/section&gt;
+     &lt;/article&gt;
+&lt;/body&gt;
+</pre>
+						</p>
+						<p>
+							Jetzt geht’s ans CSS. Um einen einigermaßen Wikipedia-like Effekt hinzukriegen und um das Design schön clean zu halten, schlachten wir erstmal die 							Buttons soweit aus, dass wir nur noch schwarzen Text auf weißem Hintergrund sehen. Dafür weisen wir den Buttons im Markup eine Klasse zu
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;body&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt; button <span class="markup-rot">class=&quot;buttons_style&quot;</span>&gt;
+            &lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 1&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum... &lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button <span class="markup-rot">class=&quot;buttons_style&quot;</span>&gt;
+            &lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 2&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum..&lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button <span class="markup-rot">class=&quot;buttons_style&quot;</span>&gt;
+            &lt;img src=&quot;img/arrow-down.png&quot;/&gt;&lt;img src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 3&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+        &lt;/section&gt;
+     &lt;/article&gt;
+&lt;/body&gt;
+</pre>
+						</p>
+						<p>
+							und schrauben dann im Stylesheet den Standard-Hintergrund, den Rand und die Umrandung beim Klicken ab. Außerdem wird die Schriftgröße auf 20 Pixel 							gesetzt, damit das Ganze etwas größer wird.
+						</p>
+						<p>
+<pre class="code-block code">
+.buttons_style {
+	background:none; 
+	border:none; 
+	outline-style:none; 
+	font-size:20px;
+}
+</pre>
+						<p>
+							Bis jetzt seht ihr im Browser beide Pfeile vor der Überschrift und ausgeklappten Text. Aber damit das Tool auch Sinn macht sollte natürlich nur ein 							Pfeil angezeigt werden und der Text eingeklappt sein, wenn eure Nutzer auf die Seite kommen. Zum ein- und ausklappen  kommen wir gleich noch. Zunächst 							muss ein Pfeil verschwinden – und zwar der, der nach oben zeigt. Dazu weisen wir den Grafiken im HTML Code eine ID zu 
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;body&gt;
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt;button class=&quot;buttons_style&quot;&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_runter_1&quot;</span> src=&quot;img/arrow-down.png&quot;/&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_hoch_1&quot;</span> src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 1&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum... &lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button class=&quot;buttons_style&quot;&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_runter_2&quot;</span> src=&quot;img/arrow-down.png&quot;/&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_hoch_2&quot;</span> src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 2&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum..&lt;/p&gt;
+        &lt;/section&gt;
+			
+        &lt;section&gt;
+            &lt;button class=&quot;buttons_style&quot;&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_runter_3&quot;</span> src=&quot;img/arrow-down.png&quot;/&gt;
+            &lt;img <span class="markup-rot">id=&quot;pfeil_hoch_3&quot;</span> src=&quot;img/arrow-up.png&quot;/&gt; Kapitel 3&lt;/button&gt;
+                &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+        &lt;/section&gt;
+     &lt;/article&gt;
+&lt;/body&gt;
+</pre>
+						</p>
+						<p>
+							und lassen den nach oben zeigenden Pfeilen per CSS verschwinden. Auch der Text soll standardmäßig nicht angezeigt werden. Auch hier wird die Anzeige 							quasi unsichtbar gemacht:
+						</p>
+						<p>
+<pre class="code-block code">
+#pfeil_hoch_1, #pfeil_hoch_2, #pfeil_hoch_3 {
+	display:none;
+	}
+	
+p {
+	display:none;
+}
+</pre>
+						</p>
+						<p>
+							Kurzer Recap: Wenn der Pfeil nach oben zeigt ist das Kapitel ausgeklappt. Also sollen standardmäßig die nach unten zeigenden Pfeile zu sehen sein (bei 							eingeklappten Text).  Das Switchen der Pfeile regeln wird gleich mit etwas Javascript. Hier wird zepto.js genutzt. Eine kleine Javascript Bibliothek, 							die extra wenig Speicher verbraucht und daher gerade für Webapps optimal ist. Die Bibliothek kann unter <a href="http://www.zeptojs.com">zeptojs.com</a> 							heruntergeladen werden. Der JavaScript Code wird am besten vor dem schließenden <span class="code">&lt;body&gt;</span> Tag eingefügt:
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;script src=&quot;js/zepto.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        $(function(){
+
+            $('#but_1').on('click', function(){
+              $('#p_1').toggle();
+            });
+				
+            $('#but_2').on('click', function(){
+              $('#p_2').toggle();
+            });
+				
+            $('#but_3').on('click', function(){
+              $('#p_3').toggle();
+            });
+				
+            $('#but_1').on('click', function(){
+              $('#pfeil_hoch_1').toggle();
+              $('#pfeil_runter_1').toggle();
+            })
+				
+            $('#but_2').on('click', function(){
+              $('#pfeil_hoch_2').toggle();
+              $('#pfeil_runter_2').toggle();
+            })
+				
+            $('#but_3').on('click', function(){
+              $('#pfeil_runter_3').toggle();
+              $('#pfeil_hoch_3').toggle();
+            })
+        });
+    &lt;/script&gt;
+</pre>
+						</p>
+						<p>
+							Nachdem die Zepto Bibliothek in der ersten Zeile eingebunden wurde, wird durch die ersten drei Blöcke bestimmt, dass beim Klicken der Überschriften, der 							Text angezeigt wird. Die Toggle-Funktion (dt.: umschalten) ist das, was wir hier brauchen. Sie sorgt dafür, dass ausgewählte Elemente versteckt werden 							und beim erneuten Aufruf wieder erscheinen. Wenn das Element, was mit der Toggle Funktion verknüpft ist, am Anfang schon versteckt ist, wird es 							logischerweise beim ersten Aufruf angezeigt. Durch diesen kleinen Trick gelingt auch der Wechsel zwischen den Pfeilen. 
+						</p>
+						<p>
+							Hier könnt ihr euch nochmal in der Demo angucken, wie das ganze dann am Ende aussieht und funktioniert:
+						</p>
+						<p class="text-button">
+							<a href="../pfeil_tut/demo-pfeil.html" target="_blank">
+							<button class="demo-button">DEMO</button>
+							</a>
+						</p>
+					</div>
+				</div>
+				<!-- ENDE TEXT -->
+															
+			</div>
+		
+		<footer>
+			<a href="../index.html">
+				<h1>&copy; 2014 Kai Peters</h1>
+			</a>
+			<div>
+				<a href="kontakt.html">Kontakt</a>
+				<a href="impressum.html">Impressum</a>
+			</div>
+		</footer>
+		<script src="../js/zepto.js"></script>
+		<script>
+			$(function(){
+
+				$('#menu-icon').on('click', function(){
+				 $('ul').toggle();
+				});
+			});
+		</script>
+		
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53924984-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>

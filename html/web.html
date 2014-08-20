@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Web | Kai Peters</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+	</head>
+	
+	<body>
+		
+		<header class="slide">
+			<a href="../index.html">
+				<h1>KAI PETERS<br/><span>usability &amp; web starter</span></h1>
+			</a>
+				
+			<nav>	
+				<a class="big-nav" href="usability.html">Usability</a>
+				<a class="big-nav" href="web.html">Web</a>
+				<a class="big-nav" href="about.html">About</a>
+			</nav>
+			
+			<a  href="#" id="menu-icon"><img src="../img/burger.png" /></a>
+				<ul id="mobi-nav">
+					<a href="usability.html"><li>Usability</li></a>
+					<a href="web.html"><li>Web</li></a>
+					<a href="about.html"><li>About</li></a>
+				</ul>
+		</header>
+		
+		<div class="container">
+				
+				<!-- START DATUM UND ÜBERSCHRIFT -->
+				<div class="row">
+					
+					<a href="pfeil-tut.html">
+					<div class="blog-datum col-md-3"><span>18. AUG 2014</span></div>
+					</a>
+					
+					<div class="blog-ueberschrift col-md-9"><a href="pfeil-tut.html">Web Tutorial: Einklapp-Pfeile wie bei Wikipedia</a></div> <!-- HÖCHSTEN 49 ZEICHEN -->
+				
+				</div>
+				<!-- ENDE DATUM UND ÜBERSCHRIFT -->
+				
+				<br/>
+				
+				<!-- START BILD -->
+				<div class="row">
+					<div class="col-md-12 vorschau-bild">
+						<figure>
+							<a href="pfeil-tut.html">
+							<img src="../img/wikipedia-pfeile.png"/> <!-- Vorschaubilder immer im Seitenverhältnis 12:5 (24:10) Bsp: 2280:1200, 1440:600, min 720:300  -->
+							</a>
+						</figure>
+					</div>
+				</div>
+				<!-- ENDE BILD -->
+				
+				<br/>
+				
+				<!-- START TEXT -->
+				<div class="row">
+					<div class="col-md-12 vorschau-text">
+						<p>Wikipedia gibt dem Nutzer in der Web App (also der mobilen Webseite) die Möglichkeit einzelne Kapitel von Artikeln ein- oder auszuklappen. Um anzuzeigen, ob das Kapitel aktuell ein- oder ausgeklappt ist nutzt die Web App kleine Pfeil-Grafiken. Diese stehen links neben den Überschriften. Wenn die Pfeile nach oben zeigen, ist das Kapitel ausgeklappt; nach oben dann logischerweise eingeklappt. Der Nutzer schließt oder öffnet ein Kapitel indem er einmal auf die Überschrift tippt. Ein schönes kleines Tool, das gerade auf kleinen Bildschirmen – wie von Smartphones - extrem praktisch ist. Wer in seiner Webapp viel Text verwendet, seine Nutzer aber nicht ewig scrollen lassen will, für den kann dieses kleine Tool ganz hilfreich sein. Mit einem kleinen Tutorial zeige ich euch, wie ihr diesen Effekt ganz einfach selbst nachbauen könnt.
+						   <a href="pfeil-tut.html" class="read-more">weiterlesen</a></p>
+					</div>
+				</div>
+				<!-- ENDE TEXT -->
+															
+			</div>
+		
+		<footer>
+			<a href="../index.html">
+				<h1>&copy; 2014 Kai Peters</h1>
+			</a>
+			<div>
+				<a href="kontakt.html">Kontakt</a>
+				<a href="impressum.html">Impressum</a>
+			</div>
+		</footer>
+		<script src="../js/zepto.js"></script>
+		<script>
+			$(function(){
+
+				$('#menu-icon').on('click', function(){
+				 $('#mobi-nav').toggle();
+				});
+			});
+		</script>
+		
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53924984-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
