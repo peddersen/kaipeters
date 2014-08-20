@@ -1,0 +1,782 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video, article, input, textarea, button {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+body {
+	display:flex;
+	min-height:100vh;
+	flex-direction:column;
+}
+
+/*################### header ###################*/
+/*################### header ###################*/
+/*################### header ###################*/
+
+header {
+	background-image: -o-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -moz-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -webkit-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -ms-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: linear-gradient(to right, #542E3D 0%, #193D66 100%);
+	position:fixed;
+	top:0px;
+	width:100%;
+	height:60px;
+	z-index:900;
+}
+
+header a {
+	color:white;
+	text-decoration:none;
+}
+
+.no-white-links {
+	color:black;
+}
+
+header a:hover {
+	color:#848484;
+	text-decoration:none;
+}
+	
+header h1 {
+	font-family:'Roboto Slab', serif;
+	color:white;
+	font-size:30px;
+	display:inline-block;
+	margin-top:5px;
+	float:left;
+	}
+	
+header span {
+	font-family:sans-serif;
+	font-size:12px;
+	float:left;
+	letter-spacing:2px;
+}
+	
+header nav  {
+	color:white;
+	font-family:'Roboto Slab', serif;
+	font-size:20px;
+	float:right;
+	margin-top:20px;
+	}
+	
+header nav a {
+	margin-left:15px;
+}
+
+header ul {
+	display:none;
+	list-style:none;
+	color:white;
+	z-index: 901;
+	width:100%;
+	background-image: -o-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -moz-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -webkit-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: -ms-linear-gradient(right, #542E3D 0%, #193D66 100%);
+	background-image: linear-gradient(to right, #542E3D 0%, #193D66 100%);
+	margin-top:60px;
+}
+
+header ul li {
+	border-top:1px solid white;
+	font-family:'Roboto Slab', serif;
+	padding:15px 0;
+	text-align:center;
+}
+
+#menu-icon {
+	display: none;
+}
+
+
+@media (max-width: 480px){
+	.big-nav {
+		display:none;
+	}
+	#menu-icon {
+		display:inline-block;
+		float:right;
+	}
+	#menu-icon img {
+		width:40px;
+		height:40px;
+		margin-top:10px;
+	}
+	header h1 {
+		font-size:20px;
+	}
+}
+
+@media (min-width: 480px){
+	.slide {
+		-webkit-animation: slideOut 2s ease-in-out;
+		-moz-animation: slideOut 2s ease-in-out;
+	}
+}
+
+/*######### HEADER SLIDE IN ON EVERY PAGE - START ######################*/
+@-webkit-keyframes slideOut{ /*definiert eine animation mit keyframes*/
+	0% {/*start bei 0%, eigenschaft margin-top beginnt bei -87px*/
+		margin-top:-87px; 
+		opacity: 0.1;
+		} 
+	100% {
+		margin-top:0px; 
+		opacity: 1;
+		}
+}
+
+@-moz-keyframes slideOut{ /*definiert eine animation mit keyframes*/
+	0% {/*start bei 0%, eigenschaft margin-top beginnt bei -87px*/
+		margin-top:-87px; 
+		opacity: 0.1;
+		} 
+	100% {
+		margin-top:0px; 
+		opacity: 1;
+		}
+}
+
+
+/*################### article & section ###################*/
+/*################### article & section ###################*/
+/*################### article & section ###################*/
+
+.container {
+	flex:1;
+	margin-top:100px;
+	z-index:100;
+	text-align:center; /*für die mittige anordnung aller sections AUßER PORTRAIT*/
+	}
+
+.breite-section {
+	width:75%;
+}
+
+.mittel-section {
+	display:inline-block;
+}
+
+@media (min-width: 1200px) {
+	.mittel-section {
+		width:60%;
+	}
+}
+
+.schlanke-section {
+	width:25%;
+}
+
+section p {
+	text-align:justify;
+}
+
+#portrait {
+	width:100%;
+	border-bottom: 1px solid #b7b7b7;
+}
+
+#portrait div {
+	display:table; /*zum zentrieren*/
+	margin:0 auto; /*zum zentrieren: hier wird nicht text-align durch article und inline-block verwendet, da diese die section portrait einen 100%igen unterstrich haben soll. damit dieser direkt unter dem bild erscheint, muss vom bild display zu block gesetzt werden. würde hier jetzt inline-block gesetzt, wäre es nicht mehr zentriert*/
+}
+
+#portrait img {
+	display:block; /*damit die section die gleichen maße wie das bild hat */
+	width:50%;
+}
+
+@media (min-width: 480px) {
+	#portrait img {
+		-webkit-animation: appear 2s ease-in-out;
+		-moz-animation: appear 2s ease-in-out;
+	}
+	#portrait img:hover {
+		opacity:0.5;
+	}
+}
+
+#last-work {
+	display:inline-block;
+}
+
+
+
+.inhalt a {
+	color:#b7b7b7;
+}
+
+#links {
+	float:left;
+}
+
+h2 {
+	color:#b7b7b7;
+	font-family:'Roboto Slab', serif;
+	font-size:26px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:50px;	
+}
+	
+p {
+	font-family:sans-serif;
+	font-size:14px;
+	color: #878787;
+}
+
+.mittel-section p {
+	margin-top:20px;
+}
+
+figcaption {
+	font-family:sans-serif;
+	font-size:10px;
+	color:#878787;
+}
+
+.text_zeile {
+	width:400px;
+	height:25px;
+	margin-bottom:20px;
+	border: 1px solid #969191;
+}
+
+textarea {
+	width:400px;
+	height:200px;
+	border: 1px solid #969191;
+}
+
+.eingabe {
+	text-align:center;
+	/*
+	-webkit-animation:slideIn_right 2s ease-out;
+	-moz-animation:slideIn_right 2s ease-out;
+	*/
+}
+
+.label {
+	font-family:'Roboto Slab', serif;
+	/*
+	margin-left:39.5%;
+	-webkit-animation:slideIn_left 2s ease-out;
+	-moz-animation:slideIn_left 2s ease-out;
+	*/
+}
+
+footer {
+	background-color:white;
+	font-family:'Roboto Slab', serif;
+	font-weight:bold;
+	padding-top:20px;
+	padding-bottom:20px;
+	margin-top:20px;
+	margin-bottom:50px;
+	text-align:center;
+	border-top:solid 1px #b7b7b7;
+}
+
+
+footer h1 {
+	float:left;
+	color:#969191;
+}
+
+@media (max-width: 460px) {
+	footer h1 {
+		display:none;
+	}
+}
+
+@media (min-width: 461px){
+	footer div {
+		float:right;
+	}
+	
+	footer div a {
+		float:left;
+	}
+}
+	
+footer div a {
+	margin-left:20px;
+	text-decoration:none;
+	color:#969191;
+}
+
+footer a h1:hover, footer a:hover {
+	color:#666666;
+	
+}
+
+
+
+/*################ KONTAKT FORMULAR LABEL SLIDE IN ######################*/
+@-webkit-keyframes slideIn_left {
+	0% {
+		margin-left:-10%;
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes slideIn_left {
+	0% {
+		margin-left:-10%;
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*############### FORMULAR FELDER SLIDE IN ########################*/
+@-webkit-keyframes slideIn_right {
+	0% {
+		margin-left:100%;
+		opacity: 0;
+	}
+	100% {
+		
+		opacity: 1;
+	}
+}
+@-moz-keyframes slideIn_right {
+	0% {
+		margin-left:100%;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*################ ERSCHEINEN #########################*/
+@-webkit-keyframes appear {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes appear {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/*################ HEADER AND FOOTER MARGINS ON LARGE SCREENS - START ######################*/
+@media screen and (min-width: 1280px) and (max-width: 15000px)  {
+	header h1 {
+		margin-left:25%;
+		}
+		
+	header nav {
+		margin-right:25%;
+		}
+		
+	footer h1 {
+		margin-left:25%;
+	}
+		
+	footer div {
+		margin-right:25%;
+	}
+	}	
+	
+/*################# HEADER AND FOOTER MARGINS ON MIDDLE SCREENS #####################*/
+@media screen and (min-width: 360px) and (max-width: 1280px) {
+	header h1 {
+		margin-left:5px;
+		}
+		
+	header nav {
+		margin-right:10px;
+		}
+		
+	footer h1 {
+		margin-left:5px;
+	}
+		
+	footer div {
+		margin-right:5px;
+	}
+	}
+
+/*################# HEADER AND FOOTER MARGINS ON SMALL SCREENS #####################*/
+@media screen and (min-width: 1px) and (max-width: 360px) {
+	/*hier soll dann ein burger icon oben rechts erscheinen, welches die auswahl liste aktiviert*/
+	}
+
+/*
+#impressum {
+	width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}*/
+
+#impressum p {
+	font-family:"Helvetica";
+	font-size:12px;
+	font-weight:100;
+}
+
+#impressum h2 {
+	font-family:"Helvetica";
+	font-size:16px;
+	font-weight:300;
+	margin-top:10px;
+	text-align:left;
+}
+
+.kontakt p {
+	font-size:12px;
+	text-align:center;
+}
+
+.kontakt-button {
+	background: #828282;
+  	background-image: -webkit-linear-gradient(top, #828282, #333333);
+  	background-image: -moz-linear-gradient(top, #828282, #333333);
+  	background-image: -ms-linear-gradient(top, #828282, #333333);
+  	background-image: -o-linear-gradient(top, #828282, #333333);
+  	background-image: linear-gradient(to bottom, #828282, #333333);
+  	-webkit-box-shadow: 0px 1px 3px #666666;
+  	-moz-box-shadow: 0px 1px 3px #666666;
+  	box-shadow: 0px 1px 3px #666666;
+  	font-family:'Roboto Slab', serif;
+  	color: #ffffff;
+  	font-size: 20px;
+  	padding: 10px 20px 10px 20px;
+  	border: solid #d6d6d6 2px;
+  	text-decoration: none;
+  	margin-bottom:10px;
+}
+
+.kontakt-button:hover {
+  	background: #3cb0fd;
+  	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  	text-decoration: none;
+  	cursor:pointer;
+}
+
+#copymail {
+	display:inline-block;
+	padding: 10px;
+	background-color: #e6e6e6;
+	box-shadow: inset 1px 1px 3px #666666;
+	font-family:"Courier New";
+	margin-bottom: 10px;
+}
+
+.code-block {
+	text-align:left;
+	background-color: #e6e6e6;
+	box-shadow: inset 1px 1px 3px #666666;
+	padding:15px;
+	font-size:12px;
+}
+
+.code {
+	
+	font-family:'Consolas';
+	color:black;
+}
+
+.markup-rot {
+	color:red;
+}
+
+.demo-button {
+	background: #1085C7;
+  	font-family:'Roboto Slab', serif;
+  	color: #ffffff;
+  	font-size: 20px;
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+  	margin-bottom:10px;
+  	border:none;
+}
+
+.demo-button:hover {
+	background: #3cb0fd;
+  	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  	text-decoration: none;
+  	cursor:pointer;
+}
+
+.text-button {
+	text-align:center;
+}
+
+pre {
+	white-space: pre-wrap; 
+    white-space: -moz-pre-wrap; 
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+	word-wrap:break-word;
+}
+
+/* START Blog Übersicht Code */
+.blog-datum {
+	background:#1085C7;
+}
+
+.blog-datum:hover {
+	background:#0a5b87;
+	
+}
+
+.blog-datum span {
+	color:white;
+	text-transform:uppercase;
+	font-weight:900;
+	font-family:'Roboto Slab', serif;
+	letter-spacing:2px;
+}
+
+.blog-datum a {
+	text-decoration:none;
+}
+
+a {
+	text-decoration:none;
+}
+
+.blog-ueberschrift a {
+	color:#969191;
+}
+
+.blog-ueberschrift {
+	font-family:'Roboto Slab', serif;
+}
+
+.blog-ueberschrift a:hover {
+	color:#666666;
+}
+
+@media (min-width:1200px) {
+	.blog-datum {
+		padding:30px 0;
+	}
+	.blog-ueberschrift {
+		padding:24px 0;
+		font-size:21px;
+		border-top:2px solid #1085C7;
+	}
+	.vorschau-bild, .vorschau-text{
+		padding:0;
+	}
+}
+
+img {
+	width:100%;
+	margin-top:10px;
+}
+
+p {
+	text-align:justify;
+	margin-top:10px;
+}
+
+
+
+.read-more {
+	text-transform:uppercase;
+	color:#1085C7;
+}
+
+.read-more:hover {
+	color:#0a5b87;
+}
+
+/* Ende Blog Übersicht Code */
+
+/*Start Circle Hover Code*/
+.grid {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	width:100%;
+}
+
+.grid:after, .element:before {
+	content:'';
+	display:table;
+}
+
+.grid:after {
+	clear:both;
+}
+
+.grid li {
+	width:220px;
+	height:220px;
+	display:inline-block;
+	margin:20px;
+}
+
+@media (max-width:481px) {
+	.grid li {
+		width:160px;
+		height:160px;
+	}
+}
+
+.element {
+	width:100%;
+	height:100%;
+	border-radius:50%;/*macht das li element zum kreis*/
+	overflow:hidden;/*sollte das element (hier also das li element) größer sein, als das eltern element, so wird hier mit 'overflow:hidden' bestimmt, dass das kind element abgeschnitten wird*/
+	position: relative;
+	box-shadow: inset 0 0 0 16px rgba(255,255,255,0.6);
+}
+
+@media (min-width: 480px) {
+	.element {
+		transition: all 0.4s ease-in-out;
+	}
+	
+	.info {
+		transition:all 0.4s ease-in-out;
+		transform:scale(0);
+	}
+	.element:hover {
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.element:hover .info {
+	transform: scale(1);
+	opacity:1;
+}
+
+.element:hover .info p {
+	opacity: 1;
+}
+}
+
+.bild-1 {
+	background-image: url(../img/db-studie-index-vorschau.png);
+}
+
+.bild-2 {
+	background-image: url(../img/pfeile-index-vorschau.png);
+}
+
+.info {
+	position: absolute;
+	background: rgba(0,132,201,0.8);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	overflow:hidden;
+	opacity:0;
+	
+}
+
+
+
+.info h3 {
+	color:#fff;
+	text-transform:uppercase;
+	letter-spacing: 2px;
+	font-size:22px;
+	margin:0 30px;
+	padding: 45px 0 0 0;
+	height: 80px;
+	font-family:'Roboto Slab', serif;
+}
+
+.info p {
+	color:#fff;
+	padding:10px 5px;
+	margin:0 30px;
+	font-size:16px;
+	font-weight:bold;
+	letter-spacing:4px;
+	font-family:'Roboto Slab', serif;
+	border-top:1px solid rgba(255,255,255,0.5);
+	transition: all 1s ease-in-out 0.4s;
+}
+
+.info:hover {
+	cursor:pointer;
+}
+/*
+.info p a {
+	display:block;
+	color: rgba(255,255,255,0.7);
+	text-transform:uppercase;
+	font-size:12px;
+	font-weight:bold;
+	letter-spacing:1px;
+	padding-top:4px;
+	font-family: 'Roboto';
+}
+
+.info p a:hover {
+	color:#666666;	
+}
+*/
+.grid li p {
+	text-align:center;
+	font-size:14px;
+	margin-top:10px;
+}
+
+/*Ende Circle Hover Code*/
+
+/*Start Header Slide Code
+header {
+	-webkit-animation: slideOut 2s ease-in-out;
+	-moz-animation: slideOut 2s ease-in-out;
+}*/
+
+/*######### HEADER SLIDE IN ON EVERY PAGE - START ######################*/
+@-webkit-keyframes slideOut{ /*definiert eine animation mit keyframes*/
+	0% {/*start bei 0%, eigenschaft margin-top beginnt bei -87px*/
+		margin-top:-87px; 
+		opacity: 0.1;
+		} 
+	100% {
+		margin-top:0px; 
+		opacity: 1;
+		}
+}
+
+@-moz-keyframes slideOut{ /*definiert eine animation mit keyframes*/
+	0% {/*start bei 0%, eigenschaft margin-top beginnt bei -87px*/
+		margin-top:-87px; 
+		opacity: 0.1;
+		} 
+	100% {
+		margin-top:0px; 
+		opacity: 1;
+		}
+}
+/*Ende Header Slide Code*/
