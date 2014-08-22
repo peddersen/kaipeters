@@ -5,6 +5,17 @@ time, mark, audio, video, article, input, textarea, button {
 	padding: 0;
 	font-size: 100%;
 }
+@font-face {
+    font-family: 'dolce_vita';
+    src: url('../fonts/dolce_vita_light-webfont.eot');
+    src: url('../fonts/dolce_vita_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dolce_vita_light-webfont.woff') format('woff'),
+         url('../fonts/dolce_vita_light-webfont.ttf') format('truetype'),
+         url('../fonts/dolce_vita_light-webfont.svg#roboto_slabthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body {
 	display:flex;
@@ -30,38 +41,35 @@ header {
 }
 
 header a {
-	color:white;
-	text-decoration:none;
+	color:#ffffff;
 }
 
-.no-white-links {
-	color:black;
-}
-
-header a:hover {
+header nav a:hover {
 	color:#848484;
-	text-decoration:none;
 }
 	
 header h1 {
-	font-family:'Roboto Slab', serif;
-	color:white;
+	font-family:'dolce_vita';
+	color:#fffffff;
 	font-size:30px;
 	display:inline-block;
-	margin-top:5px;
+	margin-top:10px;
 	float:left;
 	}
 	
 header span {
 	font-family:sans-serif;
-	font-size:12px;
+	font-size:11px;
 	float:left;
-	letter-spacing:2px;
+	letter-spacing:3px;
+	line-height:5px;
+	font-weight:lighter;
+	text-transform:capitalize;
 }
 	
 header nav  {
-	color:white;
-	font-family:'Roboto Slab', serif;
+	color:#ffffff;
+	font-family:'dolce_vita';
 	font-size:20px;
 	float:right;
 	margin-top:20px;
@@ -73,9 +81,7 @@ header nav a {
 
 header ul {
 	display:none;
-	list-style:none;
-	color:white;
-	z-index: 901;
+	color:#ffffff;
 	width:100%;
 	background-image: -o-linear-gradient(right, #542E3D 0%, #193D66 100%);
 	background-image: -moz-linear-gradient(right, #542E3D 0%, #193D66 100%);
@@ -86,8 +92,8 @@ header ul {
 }
 
 header ul li {
-	border-top:1px solid white;
-	font-family:'Roboto Slab', serif;
+	border-top:1px solid #ffffff;
+	font-family:'dolce_vita';
 	padding:15px 0;
 	text-align:center;
 }
@@ -111,7 +117,7 @@ header ul li {
 		margin-top:15px;
 	}
 	header h1 {
-		font-size:20px;
+		font-size:26px;
 	}
 }
 
@@ -144,12 +150,7 @@ header ul li {
 		opacity: 1;
 		}
 }
-
-
 /*################### article & section ###################*/
-/*################### article & section ###################*/
-/*################### article & section ###################*/
-
 .container {
 	flex:1;
 	margin-top:100px;
@@ -169,10 +170,6 @@ header ul li {
 	.mittel-section {
 		width:60%;
 	}
-}
-
-.schlanke-section {
-	width:25%;
 }
 
 section p {
@@ -208,12 +205,6 @@ section p {
 	display:inline-block;
 }
 
-
-
-.inhalt a {
-	color:#b7b7b7;
-}
-
 #links {
 	float:left;
 }
@@ -233,46 +224,6 @@ p {
 	color: #878787;
 }
 
-.mittel-section p {
-	margin-top:20px;
-}
-
-figcaption {
-	font-family:sans-serif;
-	font-size:10px;
-	color:#878787;
-}
-
-.text_zeile {
-	width:400px;
-	height:25px;
-	margin-bottom:20px;
-	border: 1px solid #969191;
-}
-
-textarea {
-	width:400px;
-	height:200px;
-	border: 1px solid #969191;
-}
-
-.eingabe {
-	text-align:center;
-	/*
-	-webkit-animation:slideIn_right 2s ease-out;
-	-moz-animation:slideIn_right 2s ease-out;
-	*/
-}
-
-.label {
-	font-family:'Roboto Slab', serif;
-	/*
-	margin-left:39.5%;
-	-webkit-animation:slideIn_left 2s ease-out;
-	-moz-animation:slideIn_left 2s ease-out;
-	*/
-}
-
 footer {
 	background-color:white;
 	font-family:'Roboto Slab', serif;
@@ -284,7 +235,6 @@ footer {
 	text-align:center;
 	border-top:solid 1px #b7b7b7;
 }
-
 
 footer h1 {
 	float:left;
@@ -314,54 +264,10 @@ footer div a {
 }
 
 footer a h1:hover, footer a:hover {
-	color:#666666;
-	
+	color:#666666;	
 }
 
-
-
-/*################ KONTAKT FORMULAR LABEL SLIDE IN ######################*/
-@-webkit-keyframes slideIn_left {
-	0% {
-		margin-left:-10%;
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@-moz-keyframes slideIn_left {
-	0% {
-		margin-left:-10%;
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-/*############### FORMULAR FELDER SLIDE IN ########################*/
-@-webkit-keyframes slideIn_right {
-	0% {
-		margin-left:100%;
-		opacity: 0;
-	}
-	100% {
-		
-		opacity: 1;
-	}
-}
-@-moz-keyframes slideIn_right {
-	0% {
-		margin-left:100%;
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-/*################ ERSCHEINEN #########################*/
+/*################ ERSCHEINEN >> HEADER #########################*/
 @-webkit-keyframes appear {
 	0% {
 		opacity: 0.1;
@@ -380,7 +286,7 @@ footer a h1:hover, footer a:hover {
 }
 
 /*################ HEADER AND FOOTER MARGINS ON LARGE SCREENS - START ######################*/
-@media screen and (min-width: 1280px) and (max-width: 15000px)  {
+@media screen and (min-width: 1280px) {
 	header h1 {
 		margin-left:25%;
 		}
@@ -417,19 +323,6 @@ footer a h1:hover, footer a:hover {
 	}
 	}
 
-/*################# HEADER AND FOOTER MARGINS ON SMALL SCREENS #####################*/
-@media screen and (min-width: 1px) and (max-width: 360px) {
-	/*hier soll dann ein burger icon oben rechts erscheinen, welches die auswahl liste aktiviert*/
-	}
-
-/*
-#impressum {
-	width:60%;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-}*/
-
 #impressum p {
 	font-family:"Helvetica";
 	font-size:12px;
@@ -444,6 +337,7 @@ footer a h1:hover, footer a:hover {
 	text-align:left;
 }
 
+/*### START CODE FÜR KONTAKT SEITE ###*/
 .kontakt p {
 	font-size:12px;
 	text-align:center;
@@ -487,7 +381,9 @@ footer a h1:hover, footer a:hover {
 	font-family:"Courier New";
 	margin-bottom: 10px;
 }
+/*### ENDE CODE FÜR KONTAKT SEITE ###*/
 
+/*### START CODE FÜR CODE-ANZEIGE BEI WEB TUTS ###*/
 .code-block {
 	text-align:left;
 	background-color: #e6e6e6;
@@ -497,7 +393,6 @@ footer a h1:hover, footer a:hover {
 }
 
 .code {
-	
 	font-family:'Consolas';
 	color:black;
 }
@@ -505,6 +400,7 @@ footer a h1:hover, footer a:hover {
 .markup-rot {
 	color:red;
 }
+/*### ENDE CODE FÜR CODE-ANZEIGE BEI WEB TUTS '''*/
 
 .demo-button {
 	background: #1085C7;
@@ -528,11 +424,11 @@ footer a h1:hover, footer a:hover {
   	cursor:pointer;
 }
 
-.text-button {
+.text-button {/*damit Buttons im Fließtext mittig sind*/
 	text-align:center;
 }
 
-pre {
+pre { /*das html pre tag sorgt dafür, dass der code mit leerzeichen und umbrüchen so auch im browser dargestellt wrid. für codeanzeige*/
 	white-space: pre-wrap; 
     white-space: -moz-pre-wrap; 
     white-space: -pre-wrap;
@@ -543,6 +439,7 @@ pre {
 /* START Blog Übersicht Code */
 .blog-datum {
 	background:#1085C7;
+	padding:30px 0;
 }
 
 .blog-datum:hover {
@@ -551,11 +448,12 @@ pre {
 }
 
 .blog-datum span {
-	color:white;
+	color:#ffffff;
 	text-transform:uppercase;
 	font-weight:900;
 	font-family:'Roboto Slab', serif;
-	letter-spacing:2px;
+	font-size:14px;
+	font-weight:lighter;
 }
 
 .blog-datum a {
@@ -567,29 +465,18 @@ a {
 }
 
 .blog-ueberschrift a {
-	color:#969191;
+	color:#666666;
+	font-size:27px;
+	letter-spacing:-2px;
 }
 
 .blog-ueberschrift {
 	font-family:'Roboto Slab', serif;
+	padding:22px 0;	
 }
 
 .blog-ueberschrift a:hover {
-	color:#666666;
-}
-
-@media (min-width:1200px) {
-	.blog-datum {
-		padding:30px 0;
-	}
-	.blog-ueberschrift {
-		padding:24px 0;
-		font-size:21px;
-		border-top:2px solid #1085C7;
-	}
-	.vorschau-bild, .vorschau-text{
-		padding:0;
-	}
+	color:#969191;
 }
 
 img {
@@ -597,12 +484,41 @@ img {
 	margin-top:10px;
 }
 
-p {
-	text-align:justify;
-	margin-top:10px;
+.vorschau-text {
+	font-weight:900;
 }
 
+.text {
+	line-height:24px;
+}
 
+@media (min-width:1200px) {
+	
+	.blog-ueberschrift {
+		border-top:2px solid #1085C7;
+	}
+	.vorschau-bild, .text{
+		padding:0;
+	}
+}
+
+@media (max-width:480px){
+	.blog-datum {
+		padding:10px 0;
+		margin-bottom:10px;
+	}
+	.blog-ueberschrift {
+		font-size:22px;
+	}
+	img {
+		margin-top:0;
+	}
+}
+
+p {
+	text-align:justify;
+	margin-top:20px;
+}
 
 .read-more {
 	text-transform:uppercase;
@@ -612,7 +528,6 @@ p {
 .read-more:hover {
 	color:#0a5b87;
 }
-
 /* Ende Blog Übersicht Code */
 
 /*Start Circle Hover Code*/
@@ -661,23 +576,20 @@ p {
 	.element {
 		transition: all 0.4s ease-in-out;
 	}
-	
 	.info {
 		transition:all 0.4s ease-in-out;
 		transform:scale(0);
 	}
 	.element:hover {
-	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.element:hover .info {
-	transform: scale(1);
-	opacity:1;
-}
-
-.element:hover .info p {
+		box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
+	}
+	.element:hover .info {
+		transform: scale(1);
+		opacity:1;
+	}
+	.element:hover .info p {
 	opacity: 1;
-}
+	}
 }
 
 .bild-1 {
@@ -690,16 +602,13 @@ p {
 
 .info {
 	position: absolute;
-	background: rgba(0,132,201,0.8);
+	background: rgba(0,132,201,0.95);
 	width: inherit;
 	height: inherit;
 	border-radius: 50%;
 	overflow:hidden;
 	opacity:0;
-	
 }
-
-
 
 .info h3 {
 	color:#fff;
@@ -718,8 +627,7 @@ p {
 	margin:0 30px;
 	font-size:16px;
 	font-weight:bold;
-	letter-spacing:4px;
-	font-family:'Roboto Slab', serif;
+	font-family:sans-serif;
 	border-top:1px solid rgba(255,255,255,0.5);
 	transition: all 1s ease-in-out 0.4s;
 }
@@ -727,35 +635,13 @@ p {
 .info:hover {
 	cursor:pointer;
 }
-/*
-.info p a {
-	display:block;
-	color: rgba(255,255,255,0.7);
-	text-transform:uppercase;
-	font-size:12px;
-	font-weight:bold;
-	letter-spacing:1px;
-	padding-top:4px;
-	font-family: 'Roboto';
-}
 
-.info p a:hover {
-	color:#666666;	
-}
-*/
 .grid li p {
 	text-align:center;
 	font-size:14px;
 	margin-top:10px;
 }
-
 /*Ende Circle Hover Code*/
-
-/*Start Header Slide Code
-header {
-	-webkit-animation: slideOut 2s ease-in-out;
-	-moz-animation: slideOut 2s ease-in-out;
-}*/
 
 /*######### HEADER SLIDE IN ON EVERY PAGE - START ######################*/
 @-webkit-keyframes slideOut{ /*definiert eine animation mit keyframes*/

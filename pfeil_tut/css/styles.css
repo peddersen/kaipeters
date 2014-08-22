@@ -11,3 +11,16 @@
 p {
 	display:none;
 }
+
+@media (max-width:480px){
+	.buttons_style {
+		font-size:36px;
+		width:100%;
+	}
+}
+
+@media (min-width:480px){
+	p {
+		width:200px;
+	}
+}
