@@ -224,6 +224,15 @@ p {
 	color: #878787;
 }
 
+figcaption {
+	font-size:12px;
+	font-family:sans-serif;
+	text-align:left;
+	margin-top:-5px;
+	color:#606060;
+	font-weight:bold;
+}
+
 footer {
 	background-color:white;
 	font-family:'Roboto Slab', serif;
@@ -468,11 +477,13 @@ a {
 	color:#666666;
 	font-size:27px;
 	letter-spacing:-2px;
+	margin-left:5px;
 }
 
 .blog-ueberschrift {
 	font-family:'Roboto Slab', serif;
 	padding:22px 0;	
+	text-align:left;
 }
 
 .blog-ueberschrift a:hover {
@@ -486,6 +497,11 @@ img {
 
 .vorschau-text {
 	font-weight:900;
+}
+
+.vt-abstand-unten {
+	
+	margin-bottom:50px;
 }
 
 .text {
@@ -524,6 +540,7 @@ p {
 	text-transform:uppercase;
 	color:#1085C7;
 }
+
 
 .read-more:hover {
 	color:#0a5b87;
@@ -598,6 +615,10 @@ p {
 
 .bild-2 {
 	background-image: url(../img/pfeile-index-vorschau.png);
+}
+
+.bild-3 {
+	background-image: url(../img/loveletter-vorschau-index.png);
 }
 
 .info {
