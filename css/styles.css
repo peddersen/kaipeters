@@ -224,6 +224,10 @@ p {
 	color: #878787;
 }
 
+.video {
+	text-align:center;
+}
+
 figcaption {
 	font-size:12px;
 	font-family:sans-serif;
