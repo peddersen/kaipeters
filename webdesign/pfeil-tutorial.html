@@ -75,9 +75,9 @@
 							<button class="demo-button">DEMO</button>
 							</a>
 						</p>
-						<p>
+						<h3>
 							Zuerst mal das Markup:
-						</p>
+						</h3>
 						<p>
 <pre class="code-block code">
 &lt;body&gt;
@@ -101,8 +101,9 @@
 </pre>
 						</p>
 						<p>
-							Wir verwenden hier drei Kapitel mit entsprechend drei Kapitelüberschriften. Die Pfeile samt Überschrift werden in ein <span 							class="code">&lt;button&gt;</span> Element geschrieben, damit es später egal ist, ob man auf den Pfeil oder die den Text in der Überschrift tippt, um 							das Kapitel ein- oder auszuklappen. Der eigentliche Text des Kapitels steht klassisch im <span class="code">&lt;p&gt;</span> Element und das ganze 							Konstrukt wird von den in HTML5 neuen Elementen <span class="code">&lt;article&gt;</span> und <span class="code">&lt;section&gt;</span> 							zusammengehalten. Jetzt packen wir die Pfeil Grafiken dazu. Die könnt ihr entweder direkt aus Wikipedia downloaden oder selber bauen. Innerhalb der 							Button-Tags aber vor dem Text für die Überschrift werden jetzt die Grafiken des nach unten zeigenden Pfeils und des nach oben zeigenden 							Pfeils eingefügt. Die Reihenfolge spielt dabei keine Rolle. 
+							Wir verwenden hier drei Kapitel mit entsprechend drei Kapitelüberschriften. Die Pfeile samt Überschrift werden in ein <span class="code">&lt;button&gt;</span> Element geschrieben, damit es später egal ist, ob man auf den Pfeil oder die den Text in der Überschrift tippt, um das Kapitel ein- oder auszuklappen. Der eigentliche Text des Kapitels steht klassisch im <span class="code">&lt;p&gt;</span> Element und das ganze Konstrukt wird von den in HTML5 neuen Elementen <span class="code">&lt;article&gt;</span> und <span class="code">&lt;section&gt;</span> zusammengehalten. Jetzt packen wir die Pfeil Grafiken dazu. Die könnt ihr entweder direkt aus Wikipedia downloaden oder selber bauen. Innerhalb der Button-Tags aber vor dem Text für die Überschrift werden jetzt die Grafiken des nach unten zeigenden Pfeils und des nach oben zeigenden Pfeils eingefügt. Die Reihenfolge spielt dabei keine Rolle. 
 						</p>
+						<h3>Grafiken einfügen:</h3>
 						<p>
 <pre class="code-block code">
 &lt;body&gt;
@@ -134,6 +135,7 @@
 						<p>
 							Jetzt geht’s ans CSS. Um einen einigermaßen Wikipedia-like Effekt hinzukriegen und um das Design schön clean zu halten, schlachten wir erstmal die 							Buttons soweit aus, dass wir nur noch schwarzen Text auf weißem Hintergrund sehen. Dafür weisen wir den Buttons im Markup eine Klasse zu
 						</p>
+						<h3>Buttons Klassen zuweisen:</h3>
 						<p>
 <pre class="code-block code">
 &lt;body&gt;
@@ -160,8 +162,9 @@
 </pre>
 						</p>
 						<p>
-							und schrauben dann im Stylesheet den Standard-Hintergrund, den Rand und die Umrandung beim Klicken ab. Außerdem wird die Schriftgröße auf 20 Pixel 							gesetzt, damit das Ganze etwas größer wird.
+							und schrauben dann im Stylesheet den Standard-Hintergrund, den Rand und die Umrandung beim Klicken ab. Außerdem wird die Schriftgröße auf 20 Pixel 	gesetzt, damit das Ganze etwas größer wird.
 						</p>
+						<h3>Standard-Gestaltung der Buttons entfernen:</h3>
 						<p>
 <pre class="code-block code">
 .buttons_style {
@@ -172,8 +175,9 @@
 }
 </pre>
 						<p>
-							Bis jetzt seht ihr im Browser beide Pfeile vor der Überschrift und ausgeklappten Text. Aber damit das Tool auch Sinn macht sollte natürlich nur ein 							Pfeil angezeigt werden und der Text eingeklappt sein, wenn eure Nutzer auf die Seite kommen. Zum ein- und ausklappen  kommen wir gleich noch. Zunächst 							muss ein Pfeil verschwinden – und zwar der, der nach oben zeigt. Dazu weisen wir den Grafiken im HTML Code eine ID zu 
+							Bis jetzt seht ihr im Browser beide Pfeile vor der Überschrift und ausgeklappten Text. Aber damit das Tool auch Sinn macht sollte natürlich nur ein Pfeil angezeigt werden und der Text eingeklappt sein, wenn eure Nutzer auf die Seite kommen. Zum ein- und ausklappen  kommen wir gleich noch. Zunächst muss ein Pfeil verschwinden – und zwar der, der nach oben zeigt. Dazu weisen wir den Grafiken im HTML Code eine ID zu 
 						</p>
+						<h3>Grafiken IDs zuweisen:</h3>
 						<p>
 <pre class="code-block code">
 &lt;body&gt;
@@ -203,8 +207,9 @@
 </pre>
 						</p>
 						<p>
-							und lassen den nach oben zeigenden Pfeilen per CSS verschwinden. Auch der Text soll standardmäßig nicht angezeigt werden. Auch hier wird die Anzeige 							quasi unsichtbar gemacht:
+							und lassen den nach oben zeigenden Pfeilen per CSS verschwinden. Auch der Text soll standardmäßig nicht angezeigt werden. Auch hier wird die Anzeige quasi unsichtbar gemacht:
 						</p>
+						<h3>Nach-oben-Pfeile und Absätze verstecken:</h3>
 						<p>
 <pre class="code-block code">
 #pfeil_hoch_1, #pfeil_hoch_2, #pfeil_hoch_3 {
@@ -217,8 +222,9 @@ p {
 </pre>
 						</p>
 						<p>
-							Kurzer Recap: Wenn der Pfeil nach oben zeigt ist das Kapitel ausgeklappt. Also sollen standardmäßig die nach unten zeigenden Pfeile zu sehen sein (bei 							eingeklappten Text).  Das Switchen der Pfeile regeln wird gleich mit etwas Javascript. Hier wird zepto.js genutzt. Eine kleine Javascript Bibliothek, 							die extra wenig Speicher verbraucht und daher gerade für Webapps optimal ist. Die Bibliothek kann unter <a href="http://www.zeptojs.com">zeptojs.com</a> 							heruntergeladen werden. Der JavaScript Code wird am besten vor dem schließenden <span class="code">&lt;body&gt;</span> Tag eingefügt:
+							Kurzer Recap: Wenn der Pfeil nach oben zeigt ist das Kapitel ausgeklappt. Also sollen standardmäßig die nach unten zeigenden Pfeile zu sehen sein (bei eingeklappten Text).  Das Switchen der Pfeile regeln wird gleich mit etwas Javascript. Hier wird zepto.js genutzt. Eine kleine Javascript Bibliothek, die extra wenig Speicher verbraucht und daher gerade für Webapps optimal ist. Die Bibliothek kann unter <a href="http://www.zeptojs.com">zeptojs.com</a> heruntergeladen werden. Der JavaScript Code wird am besten vor dem schließenden <span class="code">&lt;body&gt;</span> Tag eingefügt:
 						</p>
+						<h3>Zepto: JavaScript-Bibliothek für Webapps:</h3>
 						<p>
 <pre class="code-block code">
 &lt;script src=&quot;js/zepto.js&quot;&gt;&lt;/script&gt;
@@ -256,7 +262,7 @@ p {
 </pre>
 						</p>
 						<p>
-							Nachdem die Zepto Bibliothek in der ersten Zeile eingebunden wurde, wird durch die ersten drei Blöcke bestimmt, dass beim Klicken der Überschriften, der 							Text angezeigt wird. Die Toggle-Funktion (dt.: umschalten) ist das, was wir hier brauchen. Sie sorgt dafür, dass ausgewählte Elemente versteckt werden 							und beim erneuten Aufruf wieder erscheinen. Wenn das Element, was mit der Toggle Funktion verknüpft ist, am Anfang schon versteckt ist, wird es 							logischerweise beim ersten Aufruf angezeigt. Durch diesen kleinen Trick gelingt auch der Wechsel zwischen den Pfeilen. 
+							Nachdem die Zepto Bibliothek in der ersten Zeile eingebunden wurde, wird durch die ersten drei Blöcke bestimmt, dass beim Klicken der Überschriften, der Text angezeigt wird. Die Toggle-Funktion (dt.: umschalten) ist das, was wir hier brauchen. Sie sorgt dafür, dass ausgewählte Elemente versteckt werden und beim erneuten Aufruf wieder erscheinen. Wenn das Element, was mit der Toggle Funktion verknüpft ist, am Anfang schon versteckt ist, wird es logischerweise beim ersten Aufruf angezeigt. Durch diesen kleinen Trick gelingt auch der Wechsel zwischen den Pfeilen. 
 						</p>
 						<p>
 							Hier könnt ihr euch nochmal in der Demo angucken, wie das ganze dann am Ende aussieht und funktioniert:
