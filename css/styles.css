@@ -225,11 +225,22 @@ h2 {
 	text-align:center;
 	margin-top:50px;	
 }
+
+h3 {
+	color:#968787;
+	font-size:20px;
+	font-family:'Roboto Slab';
+	margin-top:25px;
+	font-weight:bold;
+	text-align:left;
+}
 	
 p {
 	font-family:sans-serif;
 	font-size:14px;
 	color: #878787;
+	text-align:justify;
+	margin-top:20px;
 }
 
 .video {
@@ -543,11 +554,6 @@ img {
 	}
 }
 
-p {
-	text-align:justify;
-	margin-top:20px;
-}
-
 .read-more {
 	text-transform:uppercase;
 	color:#1085C7;
@@ -622,15 +628,15 @@ p {
 }
 
 .bild-1 {
-	background-image: url(../img/db-studie-index-vorschau.png);
+	background-image: url(../bilder/db-studie-index-vorschau.png);
 }
 
 .bild-2 {
-	background-image: url(../img/pfeile-index-vorschau.png);
+	background-image: url(../bilder/pfeile-index-vorschau.png);
 }
 
 .bild-3 {
-	background-image: url(../img/loveletter-vorschau-index.png);
+	background-image: url(../bilder/loveletter-vorschau-index.png);
 }
 
 .info {
