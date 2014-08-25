@@ -658,6 +658,7 @@ img {
 	padding: 45px 0 0 0;
 	height: 80px;
 	font-family:'Roboto Slab', serif;
+	text-align:center;
 }
 
 .info p {
