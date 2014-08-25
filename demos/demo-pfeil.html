@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/styles.css" />
+		<title>Demo zum Pfeile Tutorial - Kai Peters</title>
+		<meta name="description" content="Kapitel Pfeile für Webseiten und Webapps mit HTML5, CSS3 und Javascript erstellen - So sieht es aus."/>
+	</head>
+	<body>
+		<article>
+			<section>
+				<button id="but_1" class="buttons_style"><img id="pfeil_runter_1" src="img/arrow-down.png"/><img id="pfeil_hoch_1" src="img/arrow-up.png"/> Kapitel 1</button>
+				<p id="p_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet consequat dictum. Maecenas et pellentesque est, quis ullamcorper nunc. In gravida libero nec ligula mattis hendrerit. In tristique euismod augue vitae vulputate. Morbi eu auctor sapien. Duis turpis purus, pretium ut ipsum ac, dignissim porttitor nulla. Maecenas feugiat tortor ac rutrum pharetra. Fusce consectetur aliquam malesuada.</p>
+			</section>
+			
+			<section>
+				<button id="but_2" class="buttons_style"><img id="pfeil_hoch_2" src="img/arrow-up.png"/><img id="pfeil_runter_2" src="img/arrow-down.png"/> Kapitel 2</button>
+				<p id="p_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet consequat dictum. Maecenas et pellentesque est, quis ullamcorper nunc. In gravida libero nec ligula mattis hendrerit. In tristique euismod augue vitae vulputate. Morbi eu auctor sapien. Duis turpis purus, pretium ut ipsum ac, dignissim porttitor nulla. Maecenas feugiat tortor ac rutrum pharetra. Fusce consectetur aliquam malesuada.</p>
+			</section>
+			
+			<section>
+				<button id="but_3" class="buttons_style"><img id="pfeil_hoch_3" src="img/arrow-up.png"/><img id="pfeil_runter_3" src="img/arrow-down.png"/> Kapitel 3</button>
+				<p id="p_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet consequat dictum. Maecenas et pellentesque est, quis ullamcorper nunc. In gravida libero nec ligula mattis hendrerit. In tristique euismod augue vitae vulputate. Morbi eu auctor sapien. Duis turpis purus, pretium ut ipsum ac, dignissim porttitor nulla. Maecenas feugiat tortor ac rutrum pharetra. Fusce consectetur aliquam malesuada.</p>
+			</section>
+		
+		</article>
+		
+		<script src="js/zepto.js"></script>
+		<script>
+			$(function(){
+
+				$('#but_1').on('click', function(){
+				 $('#p_1').toggle();
+				});
+				
+				$('#but_2').on('click', function(){
+				 $('#p_2').toggle();
+				});
+				
+				$('#but_3').on('click', function(){
+				 $('#p_3').toggle();
+				});
+				
+				$('#but_1').on('click', function(){
+				 $('#pfeil_hoch_1').toggle();
+				 $('#pfeil_runter_1').toggle();
+				})
+				
+				$('#but_2').on('click', function(){
+				 $('#pfeil_hoch_2').toggle();
+				 $('#pfeil_runter_2').toggle();
+				})
+				
+				$('#but_3').on('click', function(){
+				 $('#pfeil_runter_3').toggle();
+				 $('#pfeil_hoch_3').toggle();
+				})
+				
+			});
+		</script>
+	</body>
+</html>
