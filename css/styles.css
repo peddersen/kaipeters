@@ -79,27 +79,35 @@ header nav a {
 	margin-left:15px;
 }
 
-header ul {
+header ul  {
 	display:none;
 	color:#ffffff;
 	width:100%;
+	margin-top:60px;
+}
+
+header ul li {
 	background-image: -o-linear-gradient(right, #542E3D 0%, #193D66 100%);
 	background-image: -moz-linear-gradient(right, #542E3D 0%, #193D66 100%);
 	background-image: -webkit-linear-gradient(right, #542E3D 0%, #193D66 100%);
 	background-image: -ms-linear-gradient(right, #542E3D 0%, #193D66 100%);
 	background-image: linear-gradient(to right, #542E3D 0%, #193D66 100%);
-	margin-top:60px;
-}
-
-header ul li {
 	border-top:1px solid #ffffff;
 	font-family:'dolce_vita';
 	padding:15px 0;
 	text-align:center;
 }
 
+header ul li:active {
+	opacity:0.8;
+}
+
 #menu-icon {
 	display: none;
+}
+
+.big-nav, header ul li {
+	font-weight:bold;
 }
 
 
