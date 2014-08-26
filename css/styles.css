@@ -169,10 +169,10 @@ header ul li:active {
 .breite-section {
 	width:75%;
 }
-
+/*
 .mittel-section {
 	display:inline-block;
-}
+}*/
 
 @media (min-width: 1200px) {
 	.mittel-section {
@@ -197,6 +197,24 @@ section p {
 #portrait img {
 	display:block; /*damit die section die gleichen maße wie das bild hat */
 	width:50%;
+}
+
+/*################ ERSCHEINEN >> HEADER #########################*/
+@-webkit-keyframes appear {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes appear {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @media (min-width: 480px) {
@@ -243,8 +261,20 @@ p {
 	margin-top:20px;
 }
 
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 .video {
-	text-align:center;
+	position: relative;
+	padding-bottom: 56.25%; /* Default for 1600x900 videos 16:9 ratio*/
+	padding-top: 0px;
+	height: 0;
+	overflow: hidden;
 }
 
 figcaption {
@@ -297,24 +327,6 @@ footer div a {
 
 footer a h1:hover, footer a:hover {
 	color:#666666;	
-}
-
-/*################ ERSCHEINEN >> HEADER #########################*/
-@-webkit-keyframes appear {
-	0% {
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@-moz-keyframes appear {
-	0% {
-		opacity: 0.1;
-	}
-	100% {
-		opacity: 1;
-	}
 }
 
 /*################ HEADER AND FOOTER MARGINS ON LARGE SCREENS - START ######################*/
@@ -509,6 +521,12 @@ a {
 	text-align:left;
 }
 
+@media (max-width:992px){
+	.blog-ueberschrift{
+		text-align:center;
+	}
+}
+
 .blog-ueberschrift a:hover {
 	color:#969191;
 }
@@ -531,7 +549,7 @@ img {
 	line-height:24px;
 }
 
-@media (min-width:1200px) {
+@media (min-width:992px) {
 	
 	.blog-ueberschrift {
 		border-top:2px solid #1085C7;
@@ -541,7 +559,7 @@ img {
 	}
 }
 
-@media (max-width:480px){
+@media (max-width:992px){
 	.blog-datum {
 		padding:10px 0;
 		margin-bottom:10px;
