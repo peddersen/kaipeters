@@ -14,7 +14,6 @@ time, mark, audio, video, article, input, textarea, button {
          url('../fonts/dolce_vita_light-webfont.svg#roboto_slabthin') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 body {
@@ -134,6 +133,7 @@ header ul li:active {
 		-webkit-animation: slideOut 2s ease-in-out;
 		-moz-animation: slideOut 2s ease-in-out;
 	}
+
 }
 
 /*######### HEADER SLIDE IN ON EVERY PAGE - START ######################*/
@@ -174,9 +174,23 @@ header ul li:active {
 	display:inline-block;
 }*/
 
-@media (min-width: 1200px) {
+@media (min-width: 920px) {
 	.mittel-section {
 		width:60%;
+	}
+}
+
+@media (max-width: 480px){
+	.mittel-section {
+		width:100%;
+	}
+	.img-large-screen{
+		display: none !important;
+	}
+}
+@media (min-width: 481px){
+	.img-small-screen {
+		display: none !important;
 	}
 }
 
@@ -189,15 +203,11 @@ section p {
 	border-bottom: 1px solid #b7b7b7;
 }
 
-#portrait div {
+#portrait .mittel-section {
 	display:table; /*zum zentrieren*/
 	margin:0 auto; /*zum zentrieren: hier wird nicht text-align durch article und inline-block verwendet, da diese die section portrait einen 100%igen unterstrich haben soll. damit dieser direkt unter dem bild erscheint, muss vom bild display zu block gesetzt werden. würde hier jetzt inline-block gesetzt, wäre es nicht mehr zentriert*/
 }
 
-#portrait img {
-	display:block; /*damit die section die gleichen maße wie das bild hat */
-	width:50%;
-}
 
 /*################ ERSCHEINEN >> HEADER #########################*/
 @-webkit-keyframes appear {
@@ -217,7 +227,7 @@ section p {
 	}
 }
 
-@media (min-width: 480px) {
+@media (min-width: 481px) {
 	#portrait img {
 		-webkit-animation: appear 2s ease-in-out;
 		-moz-animation: appear 2s ease-in-out;
@@ -227,11 +237,16 @@ section p {
 	}
 }
 
+#portrait img {
+	display:block; /*damit die section die gleichen maße wie das bild hat */
+	width: 50%;
+}
+
 #last-work {
 	display:inline-block;
 }
 
-#links {
+.links {
 	float:left;
 }
 
@@ -303,13 +318,13 @@ footer h1 {
 	color:#969191;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
 	footer h1 {
 		display:none;
 	}
 }
 
-@media (min-width: 461px){
+@media (min-width: 481px){
 	footer div {
 		float:right;
 	}
