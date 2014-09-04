@@ -672,6 +672,10 @@ img {
 	background-image: url(../bilder/loveletter-vorschau-index.png);
 }
 
+.bild-4 {
+	background-image: url(../bilder/phonegap-vorschau-index.png);
+}
+
 .info {
 	position: absolute;
 	background: rgba(0,132,201,0.95);

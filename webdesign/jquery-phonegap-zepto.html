@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery, PhoneGap, Zepto - HTML5, CSS3 und JavaScript zur App Entwicklung - Kai Peters</title>
+		<meta name="description" content="Mit Phonegap lassen sich native Apps erstellen, die in HTML5, CSS3 und JavaScript geschrieben wurden."/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="../css/grid.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/styles.css"/>
+		<link rel="canonical" href="http://www.kai-peters.com/webdesign/jquery-phonegap-zepto.html"/>
+		<link rel="shortcut icon" href="../bilder/icon.ico"/>
+	</head>
+	
+	<body>
+		
+		<header>
+			<a href="../index.html">
+				<h1>KAI PETERS<br/><span>usability &amp; web starter</span></h1>
+			</a>
+				
+			<nav>	
+				<a class="big-nav" href="../usability/usability-start.html">Usability</a>
+				<a class="big-nav" href="webdesign-start.html">Web</a>
+				<a class="big-nav" href="../info/about.html">About</a>
+			</nav>
+			
+			<a  href="#" id="menu-icon"><img src="../bilder/burger.gif" /></a>
+				<ul>
+					<a href="../usability/usability.html"><li>Usability</li></a>
+					<a href="web.html"><li>Web</li></a>
+					<a href="../info/about.html"><li>About</li></a>
+				</ul>
+		</header>
+		
+		<div class="container">
+				
+				<!-- START DATUM UND ÜBERSCHRIFT -->
+				<div class="row">
+					
+					<a href="#">
+					<div class="blog-datum col-md-2"><span>03. SEP 2014</span></div>
+					</a>
+					
+					<div class="blog-ueberschrift col-md-10"><a href="#">jQuery - PhoneGap - Zepto: Apps mit HTML und CSS</a></div> <!-- HÖCHSTEN 49 ZEICHEN -->
+				
+				</div>
+				<!-- ENDE DATUM UND ÜBERSCHRIFT -->
+				
+				<br/>
+				
+				<!-- START BILD -->
+				<div class="row">
+					<div class="col-md-12 vorschau-bild">
+						<figure>
+							<a href="#">
+							<img src="../bilder/phonegap-vorschau.png"/> <!-- Vorschaubilder immer im Seitenverhältnis 12:5 (24:10) Bsp: 2280:1200, 1440:600, min 720:300  -->
+							</a>
+						</figure>
+					</div>
+				</div>
+				<!-- ENDE BILD -->
+				
+				<br/>
+				
+				<!-- START TEXT -->
+				<div class="row">
+					<div class="col-md-12 text">
+						<p class="vorschau-text">
+							Mit HTML5, CSS3 und JavaScript ist man in Sachen Webdesign schon gut ausgerüstet. Wenn man dann noch jQuery und Co. von oben bis unten auswendig kennt, zaubern sich die magischsten Webseiten fast wie von selbst in den Browser. Bei nativen Apps sieht es da etwas anders aus. Für Android muss man Java können, für iOS braucht man Kenntnisse in Objective-C oder neuerdings in Swift – alles viel zu kompliziert. Dachten sich auch die Leute von Nitobi (die 2011 von Adobe aufgekauft wurden) und haben mit PhoneGap ein Framework entwickelt, mit dem man seine in HTML5, CSS3 und JavaScript geschriebenen WebApps in native Apps wandeln kann. Hab ich dann auch mal ausprobiert, nachdem mir jQuery in die Hände fiel.
+						</p>
+						
+						<h3>
+							jQuery ausprobiert – PhoneGap entdeckt
+						</h3>
+						<p>
+						Neulich wollte ich mich mal in Sachen <a href="http://jquery.com/" target="_blank">jQuery</a> weiterbilden und hab auf mir den Kurs von <a href="http://www.codecademy.com/" target="_blank">Codecademy</a> reingedrückt. Auch ohne großes JavaScript Know-How kommt man schnell mit jQuery klar. Für die Ahnungslosen: jQuery ist eine JavaScript-Bibliothek. Wenn man diese in seiner HTML Datei einbindet, kann man mit einfachsten Anweisungen jede Menge Dynamik in die eigene Seite bringen. Als ich den Codecademy Kurs durch hatte, wollte ich mein neues fabulöses Wissen natürlich austesten. Stichwort: Einkaufslisten-WebApp. Mit jQuery kann man nämlich ganz einfach neue Elemente wie divs in den HTML Quellcode einbinden, ohne diese im HTML reinzuschreiben. Die Idee war, dass der User etwas eingibt, einen Button klickt und das Eingegebene dann im Viewport erscheint. Wie man sich so eine digitale Einkaufsliste halt vorstellt. 
+						</p>
+						<h3>
+							Nicht jede App funktioniert als WebApp
+						</h3>
+						<p>
+						Als WebApp ist so eine Einkaufsliste natürlich Mist. Falls der Nutzer sich nicht vorher einloggen kann, würden sich nachher ganz viele verschiedene User auf der gleichen WebApp tummeln und alle schön wild durcheinander an einer einzigen Einkaufsliste basteln. Totaler Quatsch. Das ganze irgendwie mit Logins zu lösen war mir zu blöd. Ein paar Google-Suchen später bin ich bei <a href="http://phonegap.com/" target="_blank">PhoneGap</a> gelandet. Ein Framework um WebApps ganz einfach in native Apps zu wandeln. 
+						</p>
+						<h3>
+							Quellcode hochladen – App runterladen
+						</h3>
+						<p>
+						Doch das allerbeste kommt noch: Zwar kann man PhoneGap schön installieren und dann irgendwie mit Eclipse und dem Android SDK undsoweiterundsofort sich seine App basteln, doch wenn man darauf keinen Bock hat, kann man einfach eine Zip-Datei bei <a href="http://build.phonegap.com" target="_blank">build.phonegap.com</a> hochladen und die fertige Apk-Datei runterladen. „Was? So einfach? Das ist doch ein Scherz!“ Nope, ist echt so. Echt easy. Zwar muss man sich vorher noch anmelden und kann als Nicht-Bezahler nur einmal eine Zip-Datei laden, allerdings funktioniert das Ganze auch im Zusammenspiel mit <a href="https://github.com/" target="_blank">GitHub</a>. So, dass man sein Repo so oft pullen kann, wie man will.
+						</p>
+						<h3>
+							Tipps für PhoneGap Build
+						</h3>
+						<p>
+							Trotzdem muss man einige Sachen beachten: Im Head der HTML Datei muss ein Link zum PhoneGap Framework angegeben werden:
+						</p>
+						<p>
+<pre class="code-block code">
+&lt;script&gt; src=&quot;cordova.js&quot;&gt;&lt;/script&gt;
+</pre>
+						<p>
+							Dass hier nicht phonegap.js oder Ähnliches steht hat damit zu tun, dass PhoneGap von Adobe an Apache gespendet wurde und Apache Projekte aus markenrechtlichen Gründen keine vorher verwendeten Produktenamen haben dürfen. Das ist hier aber weniger wichtig. Viel wichtiger ist es zu erwähnen, dass PhoneGap Probleme damit hat Farbverläufe (Gradients) einzubauen. Das scheint im ersten Moment nicht so schlimm, da man ja auch einfach seine Divs, Buttons und andere Elemente mit normalen Hintergrundfarben hinterlegen kann. Allerdings sind Gradients sehr hilfreich, will man nativ erscheinende Buttons oder Header designen. Eine Sache die etwas schade ist. Aber da momentan ja sowieso flaches Design modern ist, kann man diese Einschränkung noch verschmerzen. 
+						</p>
+						<h3>jQuery vs. Zepto</h3>
+						<p>
+							Bevor es zum Fazit geht noch eine Sache: Man sollte sich darüber klar sein, dass die jQuery Bibliothek 241 KB groß ist. Das schlägt sich natürlich auf die Performance nieder. Eine Alternative ist hier die <a href="http://zeptojs.com/" target="_blank">Zepto</a> Bibliothek, die in der Basis das gleiche kann wie jQuery allerdings nur 24 KB groß, also zehnmal kleiner, ist. Und das wirkt sich natürlich enorm auf die Leistung aus. JQuery hat natürlich den Vorteil, dass die Community dahinter sehr viel größer ist. Das macht sich vor allem im Support und in den Plugins bemerkbar. Sucht man zum Beispiel bei <a href="http://stackoverflow.com/" target="_blank">Stackoverflow</a> nach einer Antwort für ein Problem, findet man bezüglich jQuery jede Menge Lösungen , während die Zepto Themen im Vergleich dazu überschaubar sind. Falls man jedoch, so wie ich mit meiner Einkaufsliste, lediglich ein paar einfache Events braucht, kann man sich getrost Zepto zuwenden. Und wer jQuery kennt, der kennt auch Zepto, da Zepto auf dem jQuery API aufbaut. 
+						</p>
+						<h3>
+							Fazit
+						</h3>
+						<p>
+							Wer Lust hat native Apps zu entwickeln, braucht keine Kenntnisse in Java, Objective-C oder Swift. HTML, CSS und JavaScript sind in Verbindung mit PhoneGap fast ebenso mächtige Technologien. Man sollte nur beachten, dass man das PhoneGap Framework im HTML-Headbereich verlinkt, möglichst keine Farbverläufe verwendet und zur besseren Performance auf leichte Bibliotheken wie zum Beispiel Zepto und nicht jQuery zurückgreift. Und wer es geschafft hat bis hierhin zu lesen, der kann sich <a href="../downloads/EinfacheEinkaufsliste.apk">HIER</a> gerne mal die APK meiner Einkaufsliste runterladen.
+						</p>
+					</div>
+				</div>
+				<!-- ENDE TEXT -->
+															
+			</div>
+		
+		<footer>
+			<a href="../index.html">
+				<h1>&copy; 2014 Kai Peters</h1>
+			</a>
+			<div>
+				<a href="../info/kontakt.html">Kontakt</a>
+				<a href="../info/impressum.html">Impressum</a>
+			</div>
+		</footer>
+		<script src="../js/zepto.js"></script>
+		<script>
+			$(function(){
+
+				$('#menu-icon').on('click', function(){
+				 $('ul').toggle();
+				});
+			});
+		</script>
+		
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53924984-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
