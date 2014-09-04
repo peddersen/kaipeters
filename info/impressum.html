@@ -24,7 +24,7 @@
 			</nav>
 			
 			<a  href="#" id="menu-icon"><img src="../bilder/burger.gif" /></a>
-				<ul>
+				<ul id="mobi-nav">
 					<a href="../usability/usability-start.html"><li>Usability</li></a>
 					<a href="../webdesign/webdesign-start.html"><li>Web</li></a>
 					<a href="about.html"><li>About</li></a>
@@ -85,13 +85,16 @@ Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihr
 				
 			</div>
 		</footer>
-		<script src="../js/zepto.js"></script>
+		
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/touch.js"></script>
 		<script>
 			$(function(){
 
-				$('#menu-icon').on('click', function(){
-				 $('ul').toggle();
+				$('#menu-icon').tap(function(){
+				 $('#mobi-nav').toggle();
 				});
+				
 			});
 		</script>
 		

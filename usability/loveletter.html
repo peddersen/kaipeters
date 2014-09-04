@@ -26,7 +26,7 @@
 			</nav>
 			
 			<a  href="#" id="menu-icon"><img src="../bilder/burger.gif" /></a>
-				<ul>
+				<ul id="mobi-nav">
 					<a href="usability-start.html"><li>Usability</li></a>
 					<a href="../webdesign/webdesign-start.html"><li>Web</li></a>
 					<a href="../info/about.html"><li>About</li></a>
@@ -128,13 +128,15 @@
 				<a href="../info/impressum.html">Impressum</a>
 			</div>
 		</footer>
-		<script src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/touch.js"></script>
 		<script>
 			$(function(){
 
-				$('#menu-icon').on('click', function(){
-				 $('ul').toggle();
+				$('#menu-icon').tap(function(){
+				 $('#mobi-nav').toggle();
 				});
+				
 			});
 		</script>
 		

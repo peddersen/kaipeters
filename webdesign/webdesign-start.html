@@ -123,13 +123,15 @@
 				<a href="../info/impressum.html">Impressum</a>
 			</div>
 		</footer>
-		<script src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script type="text/javascript" src="../js/touch.js"></script>
 		<script>
 			$(function(){
 
-				$('#menu-icon').on('click', function(){
+				$('#menu-icon').tap(function(){
 				 $('#mobi-nav').toggle();
 				});
+				
 			});
 		</script>
 		
