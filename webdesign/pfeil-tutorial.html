@@ -290,12 +290,11 @@ p {
 			</div>
 		</footer>
 		
-		<script type="text/javascript" src="../js/zepto.js"></script>
-		<script type="text/javascript" src="../js/touch.js"></script>
+		<script type="text/javascript" src="js/zepto.js"></script>
 		<script>
 			$(function(){
 
-				$('#menu-icon').tap(function(){
+				$('#menu-icon').on('click', function(){
 				 $('#mobi-nav').toggle();
 				});
 				
