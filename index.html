@@ -119,12 +119,13 @@
 		</footer>
 		
 		<script type="text/javascript" src="js/zepto.js"></script>
-		<script type="text/javascript" src="js/touch.js"></script>
 		<script>
-			$(document).ready(function(){
-				$(document).on('tap', '#menu-icon', function(){
+			$(function(){
+
+				$('#menu-icon').on('click', function(){
 				 $('#mobi-nav').toggle();
 				});
+				
 			});
 		</script>
 		
