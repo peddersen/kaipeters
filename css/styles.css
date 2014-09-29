@@ -676,6 +676,10 @@ img {
 	background-image: url(../bilder/phonegap-vorschau-index.png);
 }
 
+.bild-5 {
+	background-image: url(../bilder/prototyping-vorschau-index.png);
+}
+
 .info {
 	position: absolute;
 	background: rgba(0,132,201,0.95);
