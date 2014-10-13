@@ -680,6 +680,10 @@ img {
 	background-image: url(../bilder/prototyping-vorschau-index.png);
 }
 
+.bild-6 {
+	background-image: url(../bilder/axure-adaptive-views-home.png);
+}
+
 .info {
 	position: absolute;
 	background: rgba(0,132,201,0.95);
