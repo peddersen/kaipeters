@@ -5,6 +5,9 @@ time, mark, audio, video, article, input, textarea, button {
 	padding: 0;
 	font-size: 100%;
 }
+
+
+
 @font-face {
     font-family: 'dolce_vita';
     src: url('../fonts/dolce_vita_light-webfont.eot');
@@ -198,9 +201,11 @@ section p {
 	text-align:justify;
 }
 
+
 #portrait {
 	width:100%;
 	border-bottom: 1px solid #b7b7b7;
+	position: relative;
 }
 
 #portrait .mittel-section {
@@ -237,10 +242,56 @@ section p {
 	}
 }
 
-#portrait img {
+#portrait .face {
 	display:block; /*damit die section die gleichen maße wie das bild hat */
 	width: 50%;
 }
+
+#portrait #close {
+	float:right;
+	position: absolute;
+	top:0px;
+	right: 20%;
+	text-align: center;
+	width: 150px;
+	height: 50px;
+}
+
+#portrait #close img {
+	width: 32px;
+	height: 32px;
+}
+
+#portrait #close-text {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	border-radius: 15px;
+	text-align: center;
+	margin: 0;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+@media (max-width: 580px){
+	#portrait #close, #portrait #close-text {
+		display: none;
+	}
+}
+
+@media (max-width: 800px){
+	#portrait #close, #portrait #close-text {
+		right: 10%;
+	}
+}
+
+#portrait #close:hover {
+	cursor: pointer;
+}
+
+
 
 #last-work {
 	display:inline-block;

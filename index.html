@@ -44,13 +44,18 @@
 			<div id="portrait"> 
 				<div class="mittel-section">
 					<a href="usability/usability-start.html">
-						<img src="bilder/portrait_homepage_usability.png" alt="Portrait Kai Peters Usability" class="links img-large-screen" />
-						<img src="bilder/portrait_mobil_usability.png" alt="Portrait Kai Peters Usability" class="links img-small-screen" />
+						<img src="bilder/portrait_homepage_usability.png" alt="Portrait Kai Peters Usability" class="links img-large-screen face" />
+						<img src="bilder/portrait_mobil_usability.png" alt="Portrait Kai Peters Usability" class="links img-small-screen face" />
 					</a>
 					<a href="webdesign/webdesign-start.html">
-						<img src="bilder/portrait_homepage_webdesign.png" alt="Portrait Kai Peters Web Design" class="img-large-screen" />
-						<img src="bilder/portrait_mobil_webdesign.png" alt="Portrait Kai Peters Web Design" class="img-small-screen">
+						<img src="bilder/portrait_homepage_webdesign.png" alt="Portrait Kai Peters Web Design" class="img-large-screen face" />
+						<img src="bilder/portrait_mobil_webdesign.png" alt="Portrait Kai Peters Web Design" class="img-small-screen face"/>
 					</a>
+					<div id="close">
+						<img src="bilder/close.png"/>
+						<p id="close-text">Fresse schließen,<br/> Inhalt zeigen!</p>
+					</div>
+					
 				</div>
 			</div>
 				
@@ -58,7 +63,8 @@
 
 			<div id="last-work" class="breite-section"> 
 				
-				<h2>Neuste Beiträge:</h2>
+				<h2 id="beitraege-neu">Neuste Beiträge:</h2>
+				<h2 id="beitraege-alle">Alle Beiträge:</h2>
 		
 				<ul class="grid">
 
@@ -73,7 +79,7 @@
 								
 							</div>
 						</a>
-						<p class="info-beschriftung">Gute UX und Pagination: Geht das?</p>
+						<p class="info-beschriftung">Gute UX und Pagination?</p>
 					</li>
 					<li>
 						<a href="usability/axure-adaptive-views.html">
@@ -99,7 +105,63 @@
 								
 							</div>
 						</a>
-						<p class="info-beschriftung">Prototyping: Axure oder Photoshop?</p>
+						<p class="info-beschriftung">Prototyping: Axure vs. PS</p>
+					</li>
+
+					<li class="oldnews">
+						<a href="usability/loveletter.html">
+							<div class="element bild-3">
+								
+								<div class="info">
+									<h3>Love und Breakup Letter</h3>
+									<p>IxD</p>
+								</div>
+								
+							</div>
+						</a>
+						<p class="info-beschriftung">IxD: Love und Breakup Letter</p>
+					</li>
+
+					<li class="oldnews">
+						<a href="webdesign/jquery-phonegap-zepto.html">
+							<div class="element bild-4">
+								
+								<div class="info">
+									<h3>jQuery, PhoneGap, Zepto</h3>
+									<p>Apps</p>
+								</div>
+								
+							</div>
+						</a>
+						<p class="info-beschriftung">Apps mit HTML und CSS</p>
+					</li>
+
+					<li class="oldnews">
+						<a href="usability/usability-studie.html">
+							<div class="element bild-1">
+								
+								<div class="info">
+									<h3>Website vs. App</h3>
+									<p>Usability</p>
+								</div>
+								
+							</div>
+						</a>
+						<p class="info-beschriftung">Usability Studie Deutsche Bahn</p>
+					</li>
+
+					<li class="oldnews">
+						<a href="webdesign/pfeil-tutorial.html">
+							<div class="element bild-2">
+								
+								<div class="info">
+									<h3>Einklapp Pfeile</h3>
+									<p>Webdesign</p>
+								</div>
+								
+							</div>
+						</a>
+						<p class="info-beschriftung">Einlapp-Pfeile Animation</p>
 					</li>
 					
 					
@@ -119,15 +181,43 @@
 			</div>
 		</footer>
 		
-		<script type="text/javascript" src="js/zepto.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 		<script>
-			$(function(){
+			$(document).ready(function() {
+				$('#close-text').hide();
+				$('#menu-icon').click(function() {
+					$('#mobi-nav').slideToggle('800');
+				});
+				$('#close img').hover(function() {
+					$('#close-text').slideDown('800', function() {
+					});;
+				}, function() {
+					$('#close-text').slideUp('800');
+				});	
+				$('#beitraege-alle').hide();
+				$('.oldnews').hide();
+				$('#close img').click(function() {
+					$('#portrait').slideUp('800');
+					$('.oldnews').show();
+					$('#beitraege-alle').show();
+					$('#beitraege-neu').hide();
+				});
+			});
 
+			/*
+			$(function(){
 				$('#menu-icon').on('click', function(){
 				 $('#mobi-nav').toggle();
 				});
-				
 			});
+			$(function(){
+				$('#beitraege-alle').hide();
+				$('#close-text').hide();
+				$('#close img').on('click', function(){
+					$('#close-text').
+				})
+			});
+*/
 		</script>
 		
 		<script>
