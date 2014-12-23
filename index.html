@@ -11,13 +11,6 @@
 		<link rel="shortcut icon" href="bilder/icon.ico"/>
 	</head>
 
-	<style>
-		#news {
-			text-align: center;
-			font-style: italic;
-		}
-	</style>
-
 	<body>
 		<header class="slide">
 			<a href="index.html">
@@ -53,13 +46,11 @@
 					</a>
 					<div id="close">
 						<img src="bilder/close.png"/>
-						<p id="close-text">Fresse schließen,<br/> Inhalt zeigen!</p>
+						<p id="close-text">Fratze schließen,<br/> Inhalte zeigen!</p>
 					</div>
 					
 				</div>
 			</div>
-				
-			<p id="news">"Schon länger nix geschrieben, ich weiß. Keine Sorge, bald kommt wieder was für euch zwei Leser im Monat"</p>
 
 			<div id="last-work" class="breite-section"> 
 				
@@ -67,6 +58,20 @@
 				<h2 id="beitraege-alle">Alle Beiträge:</h2>
 		
 				<ul class="grid">
+
+					<li>
+						<a href="usability/usability-deutsche-bahn.html">
+							<div class="element bild-1">
+								
+								<div class="info">
+									<h3>Website vs. App: PAPER</h3>
+									<p>Usability</p>
+								</div>
+								
+							</div>
+						</a>
+						<p class="info-beschriftung">Studie Deutsche Bahn: PAPER</p>
+					</li>
 
 					<li>
 						<a href="usability/pagination.html">
@@ -81,6 +86,7 @@
 						</a>
 						<p class="info-beschriftung">Gute UX und Pagination?</p>
 					</li>
+
 					<li>
 						<a href="usability/axure-adaptive-views.html">
 							<div class="element bild-6">
@@ -94,7 +100,8 @@
 						</a>
 						<p class="info-beschriftung">Adaptive Views in Axure</p>
 					</li>
-					<li>
+
+					<li class="oldnews">
 						<a href="usability/prototyping.html">
 							<div class="element bild-5">
 								
@@ -201,6 +208,7 @@
 					$('.oldnews').show();
 					$('#beitraege-alle').show();
 					$('#beitraege-neu').hide();
+					$('.container').css('margin-top', '40px');
 				});
 			});
 

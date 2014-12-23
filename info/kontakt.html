@@ -59,14 +59,12 @@
 			</div>
 		</footer>
 		
-		<script type="text/javascript" src="../js/zepto.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 		<script>
-			$(function(){
-
-				$('#menu-icon').on('click', function(){
-				 $('#mobi-nav').toggle();
+			$(document).ready(function() {
+				$('#menu-icon').click(function() {
+					$('#mobi-nav').slideToggle('800');
 				});
-				
 			});
 		</script>
 		
